@@ -1,0 +1,50 @@
+Hi everyone! In this short video, I'm going to walk you through a Python project where we analyze real-world web server logs — 
+that means, all the visits and requests made to a website, recorded in a file.
+
+Don't worry if you're not from a technical background — I'll keep it simple and explain everything clearly!
+
+This project is called Web Server Log Analysis. The logs we’re using come from a real university website — 
+the University of Calgary’s computer science department.
+
+Every time someone visited that website in 1995, the server saved a line of text in a log file. 
+That line tells us the visitor’s IP address, what they tried to access, when they did it, and whether it worked or failed.
+
+Our goal is to read those logs, clean them up, and then answer 10 interesting questions about the data.
+
+Before we can analyze anything, we have to clean the data. Think of it like organizing a messy desk.
+
+We downloaded a file from an old server — it’s compressed, so we unzipped it first.
+Then we used something called regular expressions — a fancy way to pull out the useful bits from each log line.
+We converted the date into a real calendar format, like 01-Jul-1995.
+We fixed problems like missing data. For example, if the file size was missing, we set it to 0.
+And we added some extra columns — like file type — to make our analysis easier later.
+
+Once the data is clean, we can finally ask it questions! Let me walk you through each one.
+
+Q1: We count how many lines are in the file. Each line means someone tried to visit something.
+
+Q2: We check how many different IP addresses visited the site — this tells us how many unique visitors there were.
+
+Q3: We look at each day and see how many different web pages were visited on that day.
+
+Q4: We count how often people tried to visit something that didn’t exist. That’s a 404 error.
+
+Q5: We check which specific files were missing the most — maybe someone bookmarked the wrong link, or the page was deleted.
+
+Q6: Here, we check the file extensions — like .html, .jpg, or .gif — to see which types of files caused the most 404 errors.
+
+Q7: We sum up the amount of data transferred each day in July 1995 — it’s like calculating how much internet traffic the site used daily.
+
+Q8: We look at what time of day people visited. Was it more popular at noon or midnight?
+
+Q9: We check which files were visited the most — like maybe index.html, which is the homepage.
+
+Q10: Every request has a result — 200 means success, 404 means not found, 500 means server error. We count how often each happened.
+
+We saved all this work in a Jupyter Notebook, and exported it as HTML so others can view it easily.
+
+We also wrote this script out in a transcript.txt file for your convenience.
+
+This project is a great example of how we can take raw, messy data and turn it into something meaningful — even for people without a tech background.
+
+Thanks for watching, and I hope this made the process clearer and more approachable!
